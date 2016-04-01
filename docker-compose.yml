@@ -10,9 +10,6 @@ app: &default
     - .:/app
   volumes_from:
     - data_container
+  ports:
+    - 5000:5000
   working_dir: /app
-  environment:
-    VCAP_SERVICES: |
-      {
-          "alchemy_api": [ { "credentials": { "apikey": "98cfcb9d595027b5278130e692f69019b9587012" } } ]
-      }
